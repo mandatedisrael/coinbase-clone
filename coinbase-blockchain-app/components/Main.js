@@ -1,21 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import Portfolio from './Portfolio.js'
+import Promos from './Promos.js'
 
 const Main = () => {
   return (
-  <wrapper>
+  <Wrapper>
     <Portfolio />
-  </wrapper>
+    <Promos />
+  </Wrapper>
   )
 }
 
 export default Main
 
-const wrapper = styled.div`
+const Wrapper = styled.div`
 display: flex;
 max-height: cacl(100vh - 64px);
-overflow: scroll;
+overflow: hidden;
 
 & div {
     border-radius: 0.4rem;

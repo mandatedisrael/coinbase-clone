@@ -7,6 +7,7 @@ import Coin from './Coin.js'
 const Portfolio = () => {
   return (
     <Wrapper>
+    <Content>
     <PortfolioTable>
         <TableItem>
             <Title>Your Asset</Title>
@@ -33,6 +34,7 @@ const Portfolio = () => {
             )) }</div>
         </Table>
     </PortfolioTable>
+    </Content>
     </Wrapper>
   )
 }
