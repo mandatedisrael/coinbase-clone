@@ -2,10 +2,13 @@ import React from 'react'
 import Header from '../components/Header.js'
 import styled from 'styled-components'
 import Main from '../components/Main.js'
+import Sidebar from '../components/Sidebar.js'
+import Image from 'next/image.js'
 
 const Dashboard = ({address}) => {
   return (
     <Wrapper>
+      <Sidebar />
       <MainContainer>
       <Header />
       <Main />
@@ -13,7 +16,7 @@ const Dashboard = ({address}) => {
     </Wrapper>
   )
 }
-
+ 
 export default Dashboard
 
 const Wrapper = styled.div`
