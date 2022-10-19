@@ -12,6 +12,8 @@
     "@3rdweb/hooks": "^1.9.2",
     "@3rdweb/react": "^1.9.3",
     "@3rdweb/sdk": "^1.42.1",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.1",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-chartjs-2": "^4.3.1",
@@ -24,3 +26,4 @@
     "eslint-config-next": "12.3.1"
   }
 }
+

@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import {BsThreeDotsVertical} from 'react-icons/bs'
 import { coins } from '../static/coins'
 import Coin from './Coin.js'
 import BalanceChart from './BalanceChart.js'
+import { ThirdwebSDK } from '@3rdweb/sdk'
+import { ethers } from 'ethers'
+
+
+
+// const sdk = new ThirdwebSDK(
+//      new ethers.Wallet(
+//         process.env.NEXT_METAMASK_KEY, //CONTINUE HERE (1:51MINS Video)private key showing undefined
+//         ethers.getDefaultProvider('https://goerli.infura.io/v3/26ef08fad620484db7dd94544c927c39')
+//     )
+// )
+
 
 const Portfolio = () => {
+    const [sanityTokens, setSanityTokens] = useState([])
+    useEffect(() => {
+        const getCoins = async () => {
+            try {
+                const coins = await fetch("https://opbub7cm.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D'coins'%5D%7B%0A%20%20name%2C%0A%20%20usdprice%2C%0A%20%20contractaddress%2C%0A%20%20logo%2C%0A%20%20symbol%0A%7D")
+                const tempSanityTokens = await coins.json()
+                setSanityTokens(tempSanityTokens.result)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }, [])
   return (
     <Wrapper>
     <Content>
