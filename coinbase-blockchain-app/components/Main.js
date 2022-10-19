@@ -16,7 +16,7 @@ export default Main
 
 const Wrapper = styled.div`
 display: flex;
-max-height: cacl(100vh - 64px);
+max-height: calc(100vh - 64px);
 overflow: hidden;
 overflow-y: scroll;
 ::-webkit-scrollbar {

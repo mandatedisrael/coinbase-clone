@@ -15,6 +15,7 @@ const Portfolio = () => {
                     <BalanceTitle> Portfolio Balance</BalanceTitle>
                     <BalanceValue>
                         {'$'}
+                        {/* {walletBalance.toLocaleString()} */}
                         46,000
                     </BalanceValue>
                 </Balance>
@@ -59,6 +60,7 @@ const Wrapper = styled.div`
 flex:1;
 display: flex;
 justify-content: center;
+height: 100%;
 `
 
 const Content = styled.div`

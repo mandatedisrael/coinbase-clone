@@ -46,9 +46,10 @@ const options ={
     },
 }
 const BalanceChart = () => {
-    return <Wrapper>
+    return (<Wrapper>
         <Line data={data} options={options}  width={400} height={150}/>
     </Wrapper>
+    )
 }
 
 export default BalanceChart
